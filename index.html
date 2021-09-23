@@ -28,7 +28,8 @@
 
 <!-- Data container -->
 <div class="container">
-  <div class="row productContainer">
+  <h2 class="text-center mt-2">Product list</h2>
+  <div class="row productContainer mt-5">
     
   </div>
 </div>
@@ -108,21 +109,8 @@
   window.onload = async () => {
 
     let productList = await fetchData(url);
-    /* console.log(productList);
-    productList.forEach((product) => {
-      fetch("https://striveschool-api.herokuapp.com/api/product/",
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiMWJlNjRiYjUzZDAwMTViMTllY2IiLCJpYXQiOjE2MzIzMTIyOTQsImV4cCI6MTYzMzUyMTg5NH0.3CzDPp4QqBgiD6bLQdmJvbu5eazZmxZjDOXlu7ADoEA"
-        },
-        body: JSON.stringify({_id: product._id,
-                userId: product.userId})
-      })
-    }) */
-    displayData(productList, "productContainer");
 
+    displayData(productList, "productContainer");
 
   }
 </script>

@@ -43,7 +43,7 @@
             <a class="nav-link p-0" href="./backoffice.html">Back Office</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link p-0 d-none detailLink" href="./backoffice.html">Detail</a>
+            <a class="nav-link p-0 detailLink" href="./backoffice.html">Detail</a>
           </li>
         </ul>
       </div>
@@ -77,8 +77,8 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // Reveal detail link within navigation, otherwise it is hidden:
-      document.querySelector(".detailLink").classList.remove("d-none");
+
+
       // TOKEN
       const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRiMWJlNjRiYjUzZDAwMTViMTllY2IiLCJpYXQiOjE2MzIzMTIyOTQsImV4cCI6MTYzMzUyMTg5NH0.3CzDPp4QqBgiD6bLQdmJvbu5eazZmxZjDOXlu7ADoEA";
       // ENDPOINT
@@ -103,6 +103,7 @@
             // Display buttons:
             editBtn.classList.remove("d-none");
             deleteBtn.classList.remove("d-none");
+
             // Add eventListener for Edit Button:
             editBtn.addEventListener("click", handleEdit);
             // Add eventListener for Delete Button:
@@ -151,11 +152,11 @@
         }
         }
 
-
       // EVENT HANDLER FOR EDIT BUTTON:
       function handleEdit() {
         window.location.assign(`./backoffice.html?id=${queryId}`);
       }
+      
       // EVENT HANDLER FOR DELETE BUTTON:
       async function handleDelete() {
         try {
